@@ -1,7 +1,7 @@
 package com.task.exception;
 
-public class TaskNotFoundException extends RuntimeException{
-    public TaskNotFoundException (Long id){
-        super("task not found with this id" + id);
+public class TaskNotFoundException extends Throwable {
+    public TaskNotFoundException(String id){
+        super("task with this id not found " + id);
     }
 }

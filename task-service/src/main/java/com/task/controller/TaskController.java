@@ -39,13 +39,13 @@ public class TaskController {
 
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> deleteTask(@PathVariable Long id){
+    public ResponseEntity<Void> deleteTask(@PathVariable Long id) throws TaskNotFoundException {
         taskService.deleteTask(id);
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<Task> updateTask(@PathVariable Long id  , @RequestBody Task task){
+    public ResponseEntity<Task> updateTask(@PathVariable Long id  , @RequestBody Task task) throws TaskNotFoundException {
         taskService.updateTask(id ,task);
         return ResponseEntity.ok(task);
     }

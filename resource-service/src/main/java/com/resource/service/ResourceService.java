@@ -2,6 +2,7 @@ package com.resource.service;
 
 import com.resource.exception.ResourceNotFoundException;
 import com.resource.exception.TaskNotFoundException;
+import com.resource.feign.TaskClient;
 import com.resource.model.Resource;
 import com.resource.repository.ResourceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import java.util.Optional;
 public class ResourceService {
 
     @Autowired
-    private  RestTemplate restTemplate;
+    private TaskClient taskClient;
 
     @Autowired
     private  ResourceRepository resourceRepository;
@@ -29,18 +30,16 @@ public class ResourceService {
 
 
     public List<Resource> getAllResourcesByTaskId(Long taskId) {
-        String url = TASK_SERVICE_URL + "/" + taskId + "/exist";
-        Boolean existTask = restTemplate.getForObject(url, Boolean.class);
-
-        if (Boolean.TRUE.equals(existTask)) {
+        Boolean existTask = taskClient.checkTaskExists(taskId);
+        if(Boolean.TRUE.equals(existTask)){
             return resourceRepository.findByTaskId(taskId);
-        } else {
-            throw new ResourceNotFoundException(taskId);
         }
+
+        throw new ResourceNotFoundException(taskId);
+
     }
     public Resource addResource(Resource resource) {
-        String url = TASK_SERVICE_URL + "/" + resource.getTaskId() + "/exist";
-        Boolean existTask = restTemplate.getForObject(url, Boolean.class);
+        Boolean existTask = taskClient.checkTaskExists(resource.getTaskId());
 
         if (existTask != null && existTask) {
             return resourceRepository.save(resource);

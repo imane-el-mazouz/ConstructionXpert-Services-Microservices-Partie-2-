@@ -5,7 +5,7 @@ spring:
   application:
     name: task-service
   datasource:
-    url: jdbc:mysql://localhost:3306/task_db?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/db_task?createDatabaseIfNotExist=true
     username: root
     password:
   jpa:
@@ -19,4 +19,4 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8762/eureka/
