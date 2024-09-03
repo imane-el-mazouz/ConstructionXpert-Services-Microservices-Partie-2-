@@ -1,6 +1,8 @@
 package com.project.service;
 
+import com.project.dto.PersonDTO;
 import com.project.exception.ProjectNotFoundException;
+import com.project.feign.PersonClient;
 import com.project.model.Project;
 import com.project.repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,13 @@ import java.util.Optional;
 public class ProjectService {
     @Autowired
     private ProjectRepository projectRepository;
+    @Autowired
+    private PersonClient personClient;
+
+    public PersonDTO getPersonInfo(String token) {
+        return personClient.getPersonInfo(token);
+    }
+
 
     public List<Project> getAllProjects() {
         return projectRepository.findAll();

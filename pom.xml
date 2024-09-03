@@ -15,6 +15,7 @@
         <module>resource-service</module>
         <module>eureka-server</module>
         <module>gateway-service</module>
+        <module>PersonService</module>
     </modules>
 
     <dependencyManagement>

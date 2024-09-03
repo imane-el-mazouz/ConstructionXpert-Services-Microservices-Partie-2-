@@ -5,6 +5,7 @@ import com.resource.model.Resource;
 import com.resource.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,30 +18,36 @@ public class ResourceController {
     private ResourceService resourceService ;
 
     @GetMapping
+    @PreAuthorize("hasRole('User') or hasRole('Admin')")
     public ResponseEntity<List<Resource>> getAllResources(){
         List<Resource> resources = resourceService.getAllResources();
         return ResponseEntity.ok(resources);
     }
 
     @GetMapping("/task/{taskId}")
+    @PreAuthorize("hasRole('Admin')")
     public ResponseEntity<List<Resource>> getResourcesByTaskId(@PathVariable Long taskId ){
         List<Resource> resources = resourceService.getAllResourcesByTaskId(taskId);
         return ResponseEntity.ok(resources);
     }
 
     @PostMapping("/add")
+    @PreAuthorize("hasRole('Admin')")
     public ResponseEntity<Resource> saveResource(@RequestBody Resource resource){
         resourceService.addResource(resource);
         return ResponseEntity.ok(resource);
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasRole('Admin')")
     public ResponseEntity<Resource> getResourceById(@PathVariable Long id ){
         Resource resource = resourceService.getResourceById(id) .orElseThrow(() -> new ResourceNotFoundException(id));
         return ResponseEntity.ok(resource);
     }
 
     @DeleteMapping("/delete/{id}")
+    @PreAuthorize("hasRole('Admin')")
+
     public ResponseEntity<Void> deleteResource (@PathVariable Long id){
         resourceService.deleteResource(id);
         return ResponseEntity.noContent().build();
@@ -48,6 +55,8 @@ public class ResourceController {
 
 
     @PutMapping("/update/{id}")
+    @PreAuthorize("hasRole('Admin')")
+
     public ResponseEntity<Resource> updateResource(@PathVariable Long id, @RequestBody Resource resource) {
         Resource updatedResource = resourceService.updateResource(id, resource);
         return ResponseEntity.ok(updatedResource);

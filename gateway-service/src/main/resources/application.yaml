@@ -44,3 +44,10 @@ cloud:
             - Path=/api/resource/**
           filters:
             - StripPrefix=1
+
+        - id: PersonService
+          uri: lb://PERSON-SERVICE
+          predicates:
+            - Path=/api/auth/**
+          filters:
+            - StripPrefix=1
