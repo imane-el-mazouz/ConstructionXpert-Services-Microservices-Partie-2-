@@ -30,6 +30,7 @@ cloud:
             - Path=/api/project/**
           filters:
             - StripPrefix=1
+            - AddRequestHeader=Authorization, "Bearer {token}"
 
         - id: task-service
           uri: lb://TASK-SERVICE

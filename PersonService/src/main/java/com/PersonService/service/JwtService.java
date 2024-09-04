@@ -60,9 +60,9 @@ public class JwtService {
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
 
-    public String generateToken(String username, Role role) {
+    public String generateToken(String email, Role role) {
         return Jwts.builder()
-                .setSubject(username)
+                .setSubject(email)
                 .setIssuedAt(new Date())
                 .claim("role", role)
 //            .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))

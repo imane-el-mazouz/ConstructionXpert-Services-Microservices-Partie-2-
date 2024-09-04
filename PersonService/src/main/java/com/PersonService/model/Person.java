@@ -14,13 +14,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "role")
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = Admin.class, name = "Admin"),
-        @JsonSubTypes.Type(value = User.class, name = "User"),
-})
-public abstract class Person {
+
+public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
