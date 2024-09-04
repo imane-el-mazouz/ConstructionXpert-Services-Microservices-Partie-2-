@@ -1,18 +1,9 @@
-#spring.application.name=gateway-service
-#server.port=8089
-#
-#eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
-#eureka.client.register-with-eureka=true
-#eureka.client.fetch-registry=true
-#
-#
-
 spring:
   application:
     name: gateway-service
 
 server:
-  port: 8089
+  port: 8094
 
 eureka:
   client:
@@ -22,33 +13,32 @@ eureka:
     fetch-registry: true
 
 cloud:
-    gateway:
-      routes:
-        - id: project-service
-          uri: lb://PROJECT-SERVICE-
-          predicates:
-            - Path=/api/project/**
-          filters:
-            - StripPrefix=1
-            - AddRequestHeader=Authorization, "Bearer {token}"
+  gateway:
+    routes:
+      - id: project-service
+        uri: lb://PROJECT-SERVICE
+        predicates:
+          - Path=/api/project/**
+        filters:
+          - StripPrefix=1
 
-        - id: task-service
-          uri: lb://TASK-SERVICE
-          predicates:
-            - Path=/api/task/**
-          filters:
-            - StripPrefix=1
+      - id: task-service
+        uri: lb://TASK-SERVICE
+        predicates:
+          - Path=/api/task/**
+        filters:
+          - StripPrefix=1
 
-        - id: resource-service
-          uri: lb://RESOURCE-SERVICE
-          predicates:
-            - Path=/api/resource/**
-          filters:
-            - StripPrefix=1
+      - id: resource-service
+        uri: lb://RESOURCE-SERVICE
+        predicates:
+          - Path=/api/resource/**
+        filters:
+          - StripPrefix=1
 
-        - id: PersonService
-          uri: lb://PERSON-SERVICE
-          predicates:
-            - Path=/api/auth/**
-          filters:
-            - StripPrefix=1
+      - id: PersonService
+        uri: lb://PersonService
+        predicates:
+          - Path=/api/auth/**
+        filters:
+          - StripPrefix=1

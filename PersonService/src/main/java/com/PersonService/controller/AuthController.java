@@ -10,11 +10,10 @@ import com.PersonService.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/auth")
@@ -43,6 +42,25 @@ public class AuthController {
             return ResponseEntity.ok(response);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new JwtResponseDTO("Error", null));
+        }
+    }
+    @GetMapping("/person")
+    public ResponseEntity<PersonDTO> getPersonInfo(@AuthenticationPrincipal UserDetails userDetails) {
+        try {
+            PersonDTO person = personAuthService.getPersonInfo(userDetails.getUsername());
+            return ResponseEntity.ok(person);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+        }
+    }
+
+    @GetMapping("/person/{email}")
+    public ResponseEntity<PersonDTO> getPersonByEmail(@PathVariable("email") String email) {
+        try {
+            PersonDTO person = personAuthService.getPersonByEmail(email);
+            return ResponseEntity.ok(person);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
 

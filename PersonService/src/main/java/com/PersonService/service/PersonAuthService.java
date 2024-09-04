@@ -85,13 +85,20 @@ public class PersonAuthService implements UserDetailsService {
             throw new UsernameNotFoundException("Invalid user request.");
         }
     }
-    @GetMapping("/person")
-    public ResponseEntity<PersonDTO> getUserInfo(@AuthenticationPrincipal UserDetails userDetails) {
-        try {
-            PersonDTO person = personService.getPersonInfo(userDetails.getUsername());
-            return ResponseEntity.ok(person);
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+    public PersonDTO getPersonInfo(String email) {
+        Person person = personRepository.findByEmail(email);
+        if (person == null) {
+            throw new UsernameNotFoundException("User not found with email: " + email);
         }
+        return new PersonDTO(person);
     }
+
+    public PersonDTO getPersonByEmail(String email) {
+        Person person = personRepository.findByEmail(email);
+        if (person == null) {
+            throw new UsernameNotFoundException("User not found with email: " + email);
+        }
+        return new PersonDTO(person);
+    }
+
 }
