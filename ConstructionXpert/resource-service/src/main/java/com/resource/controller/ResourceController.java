@@ -26,35 +26,30 @@ public class ResourceController {
     @Autowired
     private ResourceService resourceService;
 
-    // Only ADMIN can create resources
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public Resource createResource(@RequestBody Resource resource) {
         return resourceService.createResource(resource);
     }
 
-    // Both ADMIN and CUSTOMER can get all resources
     @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
     @GetMapping
     public List<Resource> getAllResources() {
         return resourceService.getAllResources();
     }
 
-    // Both ADMIN and CUSTOMER can get resources by task ID
     @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
     @GetMapping("/task/{taskId}")
     public ResponseEntity<List<Resource>> getTasksByProjectId(@PathVariable Long taskId) throws ResourceNotFoundException {
         return ResponseEntity.ok(resourceService.getResourcesByTaskId(taskId));
     }
 
-    // Only ADMIN can update resources
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/resource/{id}")
     public Resource updateResource(@PathVariable Long id, @RequestBody Resource resourceDetails) throws ResourceNotFoundException {
         return resourceService.updateResource(id, resourceDetails);
     }
 
-    // Only ADMIN can delete resources
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteResource(@PathVariable Long id) {
