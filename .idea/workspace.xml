@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d8431d72-7631-4876-b013-ad159b803d4b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/com/eureka/EurekaServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/test/java/com/eureka/EurekaserverApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/gateway_service/GatewayServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/gateway_service/filter/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/gateway_service/filter/RouteValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/gateway_service/util/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/test/java/com/gateway_service/GatewayServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/project/ProjectServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/project/config/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/project/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/project/controller/ProjectController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/project/dto/PersonDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/project/exception/ProjectAlreadyExists.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/project/exception/ProjectNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/project/feign/PersonClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/project/model/Project.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/project/repository/ProjectRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/project/service/ProjectService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/project/util/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/main/resources/db/migration/V1__Create_Project_Table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project-service/src/test/java/com/project/ProjectServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/resource/ResourceServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/resource/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/resource/controller/ResourceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/resource/enums/Type.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/resource/exception/ResourceAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/resource/exception/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/resource/exception/TaskNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/resource/feign/TaskClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/resource/model/Resource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/resource/repository/ResourceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/resource/service/ResourceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/resources/db/migration/V1__Create_Resource_Table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/test/java/com/resource/ResourceServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/java/com/task/TaskServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/java/com/task/controller/TaskController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/java/com/task/enums/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/java/com/task/exception/ProjectNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/java/com/task/exception/TaskNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/java/com/task/exception/TaskWithThisProjectIdNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/java/com/task/feign/ProjectClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/java/com/task/model/Task.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/java/com/task/repository/TaskRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/java/com/task/service/TaskService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/resources/db/migration/V1__Create_Task_Table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/test/java/com/task/TaskServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/UserServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/configs/ApplicationConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/configs/DataInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/configs/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/configs/SecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/configs/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/controller/AuthenticationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/dto/AdminDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/dto/CustomerDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/dto/LoginResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/dto/LoginUserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/dto/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/enums/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/exception/UserAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/exception/UserNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/model/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/service/AuthenticationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/service/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/user/util/UserDetailsServiceImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V1__create_schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/user/UserServiceApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2leo7ypZlCJUhWVDshPNDoydDV4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.GatewayServiceApplication.executor": "Run",
+    "Spring Boot.ProjectServiceApplication.executor": "Run",
+    "Spring Boot.ResourceServiceApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.GatewayServiceApplication">
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.constructionxpert.eureka.EurekaServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.constructionxpert.eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gateway.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="project-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.ProjectServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResourceServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="resource-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.resource.ResourceServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="task-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.task.TaskServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.user.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.EurekaServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d8431d72-7631-4876-b013-ad159b803d4b" name="Changes" comment="" />
+      <created>1725549739692</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725549739692</updated>
+      <workItem from="1725549740890" duration="320000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
